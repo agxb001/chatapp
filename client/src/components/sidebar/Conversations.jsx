@@ -2,7 +2,7 @@ import Conversation from "./Conversation"
 
 const Conversations = () => {
     return (
-        <div>
+        <div className="overflow-auto flex-1">
 
             <Conversation />
             <Conversation />
@@ -10,7 +10,9 @@ const Conversations = () => {
             <Conversation />
             <Conversation />
             <Conversation />
-
+            <Conversation />
+            <Conversation />
+            <Conversation />
 
         </div>
     )
