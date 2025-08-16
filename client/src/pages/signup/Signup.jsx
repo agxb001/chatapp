@@ -79,8 +79,13 @@ const Signup = () => {
                     <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender} />
 
                     <div className="mt-4">
-                        <button className='btn btn-primary btn-soft btn-block mt-1'>Signup</button>
+                        <button className='btn btn-primary btn-soft btn-block mt-1' disabled={loading}>
+                            {loading ? <span className="loading loading-spinner"></span> : "Signup"}
+                        </button>
                     </div>
+
+
+
                     <Link to="/login" className='text-sm p-1 hover:underline hover:text-indigo-600 mt-2 inline-block'>
                         Already have an account?
                     </Link>

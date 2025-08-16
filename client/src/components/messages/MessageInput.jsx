@@ -1,17 +1,33 @@
-import { BsSend } from 'react-icons/bs'
+import { useState } from "react";
+import { TbSend } from "react-icons/tb";
+import useSendMessage from "../../hooks/useSendMessage";
 
 const MessageInput = () => {
+    const [message, setMessage] = useState("");
+    const { loading, sendMessage } = useSendMessage();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!message) return;
+        await sendMessage(message);
+        setMessage("");
+    };
+
     return (
-        <form className='px-2 '>
-            <div className='w-full flex items-center '>
-                <input type='text' className='outline-none text-sm rounded-lg block w-full p-3 bg-slate-900  text-white' placeholder='Send a message' />
-
-                <button type='submit' className='btn btn-circle flex items-center pe-3 bg-indigo-500  cursor-pointer justify-center'> <BsSend className='w-6 h-6' /></button>
-
+        <form className='px-2' onSubmit={handleSubmit}>
+            <div className='w-full flex gap-1 items-center'>
+                <input
+                    type='text'
+                    className=' text-sm rounded-lg block w-full p-3  bg-slate-900  text-white outline-0'
+                    placeholder='Send a message'
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
+                <button type='submit' className='flex btn btn-circle  bg-indigo-500 cursor-pointer'>
+                    {loading ? <div className='loading loading-spinner'></div> : <TbSend className="w-5 h-5 items-center justify-center" />}
+                </button>
             </div>
-
         </form>
-    )
-}
-
-export default MessageInput
+    );
+};
+export default MessageInput;
