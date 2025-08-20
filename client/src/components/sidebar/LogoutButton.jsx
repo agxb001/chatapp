@@ -9,8 +9,8 @@ const LogoutButton = () => {
             {
                 !loading ?
                     (
-                        <div className="flex items-center gap-2">
-                            <IoIosLogOut className="h-6 w-6 text-white cursor-pointer" onClick={logout} />
+                        <div className="flex items-center gap-2" onClick={logout} >
+                            <IoIosLogOut className="h-6 w-6 text-white cursor-pointer" />
                             <span className="">Logout</span>
                         </div>
                     ) :
