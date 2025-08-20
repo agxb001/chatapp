@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSocketContext } from "../context/SocketContext";
 import useConversation from "../zustand/useConversation";
 
-import notificationSound from "../assets/sounds/notification.mp3";
+import notificationSound from "../assets/sounds/notif.wav";
 
 const useListenMessages = () => {
     const { socket } = useSocketContext();

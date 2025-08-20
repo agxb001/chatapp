@@ -6,7 +6,7 @@ const Home = () => {
     const [selectedConversation, setSelectedConversation] = useState(null);
 
     return (
-        <div className="w-full max-w-[1200px] flex justify-between gap-4 px-2 py-6 min-h-[700px] bg-gray-0 rounded-md bg-clip-padding backdrop-blur-xs border relative">
+        <div className="w-full max-w-[1200px] flex justify-between gap-4 px-2 py-6 h-[800px] bg-gray-0 rounded-md bg-clip-padding backdrop-blur-xs border relative">
             <Sidebar />
             <MessageContainer />
 
