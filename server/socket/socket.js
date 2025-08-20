@@ -7,8 +7,8 @@ const app = express()
 const server = http.createServer(app)
 const io = new Server(server, {
     cors: {
-        origin: ["https://chatapp-rbwh.onrender.com"], //for production
-        // origin: ["http://localhost:3000"], // for development
+        // origin: ["https://chatapp-rbwh.onrender.com"], //for production
+        origin: ["http://localhost:3000"], // for development
         methods: ['GET', 'POST']
     }
 })
