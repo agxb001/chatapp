@@ -1,15 +1,15 @@
-import Conversations from "./Conversations"
-import LogoutButton from "./LogoutButton"
-import SearchInput from "./SearchInput"
+import Conversations from "./Conversations";
+import LogoutButton from "./LogoutButton";
+import SearchInput from "./SearchInput";
 
-const Sidebar = () => {
+const Sidebar = ({ onSelectConversation }) => {
     return (
-        <div className="min-w-[300px] border-r w-full border-slate-500 px-4 flex flex-col">
+        <div className="max-w-[468px] border-slate-500 px-2 flex flex-col">
             <SearchInput />
-            <Conversations />
+            <Conversations onSelectConversation={onSelectConversation} />
             <LogoutButton />
         </div>
-    )
-}
+    );
+};
 
-export default Sidebar
+export default Sidebar;
