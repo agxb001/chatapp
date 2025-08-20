@@ -1,29 +1,39 @@
 {
-  "name": "chatapp",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "server.js",
-  "scripts": {
-    "server": "nodemon server/server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "bcryptjs": "^3.0.2",
-    "cookie-parser": "^1.4.7",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.17.1",
-    "socket.io": "^4.8.1",
-    "tailwindcss": "^4.1.11"
-  },
-  "devDependencies": {
-    "daisyui": "^5.0.50",
-    "nodemon": "^3.1.10",
-    "prettier": "^3.6.2"
-  }
+	"name": "chatapp",
+	"version": "1.0.0",
+	"description": "🌟 Tech stack: MERN + Socket.io + TailwindCSS + Daisy UI 🎃 Authentication && Authorization with JWT 👾 Real-time messaging with Socket.io 🚀 Online user status (Socket.io and React Context) 👌 Global state management with Zustand 🐞 Error handling both on the server and on the client",
+	"type": "module",
+	"main": "server.js",
+	"scripts": {
+		"server": "nodemon server/server.js",
+		"start": "node server/server.js",
+		"build": "npm install && npm install --prefix client &&  npm run build --prefix client"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@tailwindcss/vite": "^4.1.11",
+		"bcryptjs": "^3.0.2",
+		"cookie-parser": "^1.4.7",
+		"dotenv": "^17.2.1",
+		"express": "^5.1.0",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.17.1",
+		"socket.io": "^4.8.1",
+		"tailwindcss": "^4.1.11"
+	},
+	"devDependencies": {
+		"daisyui": "^5.0.50",
+		"nodemon": "^3.1.10",
+		"prettier": "^3.6.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/agxb001/chatapp.git"
+	},
+	"bugs": {
+		"url": "https://github.com/agxb001/chatapp/issues"
+	},
+	"homepage": "https://github.com/agxb001/chatapp#readme"
 }
