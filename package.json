@@ -24,6 +24,7 @@
 		"tailwindcss": "^4.1.11"
 	},
 	"devDependencies": {
+		"@rollup/rollup-linux-x64-gnu": "^4.46.4",
 		"daisyui": "^5.0.50",
 		"nodemon": "^3.1.10",
 		"prettier": "^3.6.2"
